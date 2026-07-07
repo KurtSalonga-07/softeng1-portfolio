@@ -1,0 +1,1014 @@
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+
+:root{
+
+    --primary:#6c63ff;
+    --secondary:#00c6ff;
+
+    --bg:#f5f7ff;
+    --text:#222;
+    --card:#ffffff;
+
+    --shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+body.dark{
+
+    --bg:#10131c;
+    --text:#ffffff;
+    --card:#181c28;
+
+}
+
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+    transition:.4s;
+
+}
+
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+
+
+img{
+
+    max-width:100%;
+
+}
+
+
+
+/* =========================
+HEADER
+========================= */
+
+
+.header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:var(--card);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.logo-container{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+
+
+.logo-container h2{
+
+    font-size:18px;
+
+}
+
+
+.logo-container p{
+
+    font-size:13px;
+    opacity:.7;
+
+}
+
+
+
+.profile-img{
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid var(--primary);
+
+}
+
+
+
+
+/* =========================
+NAVIGATION
+========================= */
+
+
+.navbar{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+}
+
+
+.navbar a{
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+
+.navbar a:hover,
+.navbar .active{
+
+    color:var(--primary);
+
+}
+
+
+
+#themeToggle{
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+
+.burger{
+
+    display:none;
+
+    cursor:pointer;
+
+}
+
+
+
+.burger span{
+
+    display:block;
+
+    width:30px;
+
+    height:3px;
+
+    background:var(--text);
+
+    margin:6px;
+
+}
+
+
+
+
+
+/* =========================
+BUTTONS
+========================= */
+
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+/* =========================
+PAGE TITLE
+========================= */
+
+
+.page-title{
+
+    text-align:center;
+
+    padding:70px 8%;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+
+    color:white;
+
+}
+
+
+
+.page-title h1{
+
+    font-size:40px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+ABOUT PAGE
+========================= */
+
+
+.about-container{
+
+    padding:80px 8%;
+
+    display:flex;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+
+
+.about-container img{
+
+    width:300px;
+
+    border-radius:25px;
+
+}
+
+
+
+.about-content{
+
+    max-width:600px;
+
+}
+
+
+
+.about-box{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    background:var(--card);
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+
+
+
+
+/* =========================
+SKILLS PAGE
+========================= */
+
+
+.skills-section,
+.tech-section{
+
+    padding:70px 8%;
+
+}
+
+
+
+.title{
+
+    text-align:center;
+
+    font-size:35px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+.skill-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.skill-card{
+
+    background:var(--card);
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+
+
+.skill-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.skill-card i{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+.tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+
+.tech span{
+
+    background:var(--card);
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+
+
+
+
+/* =========================
+CONTACT PAGE
+========================= */
+
+
+.contact-container{
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:40px;
+
+}
+
+
+
+.contact-card{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    padding:20px;
+
+    margin:15px 0;
+
+    background:var(--card);
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.contact-card i{
+
+    font-size:25px;
+
+    color:var(--primary);
+
+}
+
+
+
+
+
+.contact-form{
+
+    background:var(--card);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+
+
+textarea{
+
+    height:150px;
+
+    resize:none;
+
+}
+
+
+
+
+.social-links a{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:45px;
+
+    height:45px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:50%;
+
+    margin:5px;
+
+    transition:.3s;
+
+}
+
+
+
+.social-links a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+
+/* =========================
+FOOTER
+========================= */
+
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    background:var(--card);
+
+}
+
+
+
+
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+
+@media(max-width:768px){
+
+
+.header{
+
+    padding:15px 5%;
+
+}
+
+
+
+.navbar{
+
+    position:absolute;
+
+    top:100px;
+
+    right:0;
+
+    width:100%;
+
+    padding:30px;
+
+    background:var(--card);
+
+    flex-direction:column;
+
+    display:none;
+
+}
+
+
+
+.navbar.show{
+
+    display:flex;
+
+}
+
+
+
+.burger{
+
+    display:block;
+
+}
+
+
+
+
+.about-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+
+.about-container img{
+
+    width:220px;
+
+}
+
+
+
+}
+
+/* =========================
+HOME PAGE
+========================= */
+
+
+.hero{
+
+    min-height:90vh;
+
+    padding:80px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+}
+
+
+
+.hero-text{
+
+    max-width:600px;
+
+}
+
+
+
+.hero-text h3{
+
+    color:var(--primary);
+
+    font-size:22px;
+
+}
+
+
+
+.hero-text h1{
+
+    font-size:45px;
+
+    margin:10px 0;
+
+}
+
+
+
+.hero-text h2{
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-text p{
+
+    line-height:1.8;
+
+    opacity:.8;
+
+}
+
+
+
+.btn-outline{
+
+    display:inline-block;
+
+    padding:12px 28px;
+
+    margin-left:10px;
+
+    margin-top:20px;
+
+    border-radius:30px;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    transition:.3s;
+
+}
+
+
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+/* =========================
+HOME PROFILE CARD
+========================= */
+
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.profile-card{
+
+    background:var(--card);
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+
+
+.profile-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.profile-card img{
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid var(--primary);
+
+}
+
+
+
+.profile-card h3{
+
+    margin-top:20px;
+
+}
+
+
+
+.profile-card p{
+
+    opacity:.7;
+
+}
+
+
+
+.profile-card i{
+
+    color:var(--primary);
+
+    font-size:25px;
+
+    margin:10px;
+
+}
+
+
+
+
+
+/* =========================
+SERVICES SECTION
+========================= */
+
+
+.services{
+
+    padding:70px 8%;
+
+}
+
+
+
+.service-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.service-card{
+
+    background:var(--card);
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.service-card i{
+
+    font-size:45px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.service-card h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+.service-card p{
+
+    opacity:.8;
+
+}
+
+
+
+
+
+/* =========================
+HOME MOBILE RESPONSIVE
+========================= */
+
+
+@media(max-width:768px){
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:50px 5%;
+
+}
+
+
+
+.hero-text h1{
+
+    font-size:32px;
+
+}
+
+
+
+.hero-text h2{
+
+    font-size:22px;
+
+}
+
+
+
+.profile-card img{
+
+    width:200px;
+
+    height:200px;
+
+}
+
+
+
+.btn-outline{
+
+    margin-left:0;
+
+    margin-top:15px;
+
+}
+
+
+
+}
